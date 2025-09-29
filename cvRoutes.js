@@ -4,7 +4,7 @@ const path = require("path");
 
 // mỗi request mới, require lại controller
 router.get("/", (req, res) => {
-    const cvController = require(path.join(__dirname, "../controllers/cvController"));
+    const cvController = require(path.join(__dirname, "../cvController"));
     cvController.getHome(req, res);
 });
 
