@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 });
 
 // Routes
-const cvRoutes = require("./routes/cvRoutes");
+const cvRoutes = require("./cvRoutes");
 app.use("/", cvRoutes);
 
 // Start server (Render sẽ cấp PORT động)
@@ -24,3 +24,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
