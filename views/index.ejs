@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="/images/avatar.jpg" alt="Avatar" class="avatar">
+    <h1><%= name %></h1>
+    <p class="description"><%= description %></p>
+
+    <nav>
+      <ul>
+        <li><a href="#hobbies">Sở thích</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#projects">Dự án</a></li>
+        <li><a href="#career">Mục tiêu</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sở thích -->
+    <section id="hobbies">
+      <h2>Sở thích</h2>
+      <ul>
+        <% hobbies.forEach(hobby => { %>
+          <li><%= hobby %></li>
+        <% }) %>
+      </ul>
+      <div class="section-images">
+        <a href="/images/sothich1.jpg" data-lightbox="hobbies">
+          <img src="/images/sothich1.jpg" alt="Sở thích 1" class="section-image">
+        </a>
+        <a href="/images/sothich2.jpg" data-lightbox="hobbies">
+          <img src="/images/sothich2.jpg" alt="Sở thích 2" class="section-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Kỹ năng -->
+    <section id="skills">
+      <h2>Kỹ năng</h2>
+      <ul>
+        <% skills.forEach(skill => { %>
+          <li><%= skill %></li>
+        <% }) %>
+      </ul>
+      <div class="section-images">
+        <a href="/images/skills1.jpg" data-lightbox="skills">
+          <img src="/images/skills1.jpg" alt="Kỹ năng 1" class="section-image">
+        </a>
+        <a href="/images/skills2.jpg" data-lightbox="skills">
+          <img src="/images/skills2.jpg" alt="Kỹ năng 2" class="section-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Dự án -->
+    <section id="projects">
+      <h2>Dự án</h2>
+      <ul>
+        <% projects.forEach(p => { %>
+          <li><b><%= p.name %></b>: <%= p.desc %></li>
+        <% }) %>
+      </ul>
+      <div class="section-images">
+        <a href="/images/projects1.jpg" data-lightbox="projects">
+          <img src="/images/projects1.jpg" alt="Dự án 1" class="section-image">
+        </a>
+        <a href="/images/projects2.jpg" data-lightbox="projects">
+          <img src="/images/projects2.jpg" alt="Dự án 2" class="section-image">
+        </a>
+        <a href="/images/projects3.jpg" data-lightbox="projects">
+          <img src="/images/projects3.jpg" alt="Dự án 3" class="section-image">
+        </a>
+        <a href="/images/projects4.jpg" data-lightbox="projects">
+          <img src="/images/projects4.jpg" alt="Dự án 4" class="section-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Mục tiêu nghề nghiệp -->
+    <section id="career">
+      <h2>Mục tiêu nghề nghiệp</h2>
+      <p><%= goals %></p>
+      <div class="section-images">
+        <a href="/images/goals1.jpg" data-lightbox="career">
+          <img src="/images/goals1.jpg" alt="Mục tiêu 1" class="section-image">
+        </a>
+        <a href="/images/goals2.jpg" data-lightbox="career">
+          <img src="/images/goals2.jpg" alt="Mục tiêu 2" class="section-image">
+        </a>
+      </div>
+    </section>
+
+    <!-- Liên hệ -->
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <p>Email: <%= contact.email %></p>
+      <p>Điện thoại: <%= contact.phone %></p>
+      <p>Địa chỉ: <%= contact.address %></p>
+    </section>
+  </main>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
